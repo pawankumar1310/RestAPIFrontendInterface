@@ -1,4 +1,4 @@
-async function callReadApi() {
+async function getStudentDataAPI() {
     try {
         let response = await fetch('http://localhost:5135/Student');
         if (!response.ok) {
@@ -6,7 +6,7 @@ async function callReadApi() {
         }
         let data = await response.json();
 
-        const userData = document.getElementById('userData');
+        const userData = document.getElementById('studentData');
         userData.innerHTML = data
             .map((user) => `
                 <tr>
@@ -37,4 +37,4 @@ async function callReadApi() {
     }
 }
 
-callReadApi();
+getStudentDataAPI();

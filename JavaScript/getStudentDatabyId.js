@@ -14,7 +14,7 @@ async function getStudentDataById() {
         }
         let data = await response.json();
 
-        const userData = document.getElementById('userData');
+        const userData = document.getElementById('studentData');
         userData.innerHTML = `
             <tr>
                 <td>${data.studentId || 'N/A'}</td>
