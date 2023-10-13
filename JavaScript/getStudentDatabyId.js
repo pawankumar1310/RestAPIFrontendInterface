@@ -9,6 +9,11 @@ async function getStudentDataById() {
     try {
         let response = await fetch(`http://localhost:5135/Student/${studentId}?student_Id=${studentId}`);
         // http://localhost:5135/Student/STDN00001?student_Id=STDN00001
+        if(response.status === 204)
+        {
+            alert("Student doesn't exist in database");
+            return;
+        }
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }

@@ -19,5 +19,5 @@ function deleteStudentData()
 
 function updateStudentData()
 {
-    window.location.href="TAG/RestAPIFrontendInterface/HTML/updateStudentData.html"
+    window.location.href="/TAG/RestAPIFrontendInterface/HTML/updateStudentData.html"
 }
